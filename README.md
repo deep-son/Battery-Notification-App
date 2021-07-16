@@ -1,5 +1,5 @@
 
-# Battery Notification App
+# Battery Notification App :battery:
 
 Battery Notification App helps to make laptop's battery last longer and keep it healthier.
 
