@@ -14,7 +14,7 @@ def battery(bat,visit):
             Notification(
                 title='Plug the Charger',
                 description=f'Battery % {bat.percent}',
-                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\low-battery-level.ico', 
+                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\icons\\low-battery-level.ico', 
                 duration=10,                                  
                 urgency='normal'
             ).send()
@@ -26,7 +26,7 @@ def battery(bat,visit):
             Notification(
                 title='Unplug the Charger',
                 description=f'Battery % {bat.percent}',
-                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\battery.ico', 
+                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\icons\\battery.ico', 
                 duration=10,                                  
                 urgency='normal'
             ).send()
