@@ -1,4 +1,3 @@
-import datetime 
 import time 
 import psutil
 from pynotifier import Notification
@@ -9,12 +8,12 @@ def battery(bat,visit):
     '''Create notifications every 3 minutes if battery<30 or if battery>90 
         and depending on the power_plugged status'''
 
-    if bat.percent < 30 and bat.power_plugged == False:
+    if bat.percent < 50 and bat.power_plugged == False:
         if visit%3 == 0:
             Notification(
                 title='Plug the Charger',
                 description=f'Battery % {bat.percent}',
-                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\icons\\low-battery-level.ico', 
+                icon_path= r'.\\icons\\low-battery-level.ico', 
                 duration=10,                                  
                 urgency='normal'
             ).send()
@@ -26,7 +25,7 @@ def battery(bat,visit):
             Notification(
                 title='Unplug the Charger',
                 description=f'Battery % {bat.percent}',
-                icon_path= 'D:\\Projects\\Battery Notification\\batteryApp\\icons\\battery.ico', 
+                icon_path= r'.\\icons\\battery.ico', 
                 duration=10,                                  
                 urgency='normal'
             ).send()
